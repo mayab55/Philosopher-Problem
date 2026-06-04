@@ -24,7 +24,7 @@ public class Waiter {
         this.allowedList.clear();
     }
 
-    public void plusMaxEating() {
+    public synchronized void  plusMaxEating() {
         this.maxEating++;
     }
 
@@ -32,7 +32,7 @@ public class Waiter {
         allowedList.remove(philosof);
     }
 
-    public void minusMaxEating(){
+    public synchronized void minusMaxEating(){
         this.maxEating--;
     }
 
